@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="11.0" prefWidth="1100.0" spacing="10.0" style="-fx-background-color: grey;">
+         <children>
+            <StackPane prefHeight="39.0" prefWidth="58.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#getLoginPage" prefHeight="25.0" prefWidth="50.0" text="Login" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="39.0" prefWidth="58.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Profile" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="39.0" prefWidth="58.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Search%20Icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="searchLabel" onMouseClicked="#SwitchSceneToEnterWebsitePage" onMouseEntered="#showSearchLabel" onMouseExited="#hideSearchLabel" opacity="0.0" prefHeight="23.0" prefWidth="46.0" text="Search" />
+               </children>
+            </StackPane>
+            <Button mnemonicParsing="false" onAction="#closeApplication" prefHeight="25.0" prefWidth="50.0" text="Exit">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Button>
+            <StackPane layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="58.0" />
+            <Label fx:id="expiredAccountsWarning" prefHeight="58.0" prefWidth="396.0" textFill="#e80606">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <Pane layoutX="211.0" layoutY="132.0" prefHeight="424.0" prefWidth="688.0" style="-fx-background-color: mintcream;">
+         <children>
+            <Text layoutX="189.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Website/Application Adding">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="74.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameID" layoutX="146.0" layoutY="69.0" prefHeight="25.0" prefWidth="162.0" promptText="website/application name" />
+            <Text layoutX="80.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="URL">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="urlID" layoutX="145.0" layoutY="114.0" prefHeight="25.0" prefWidth="299.0" promptText="url" />
+            <Text layoutX="61.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="62.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="74.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usernameID" layoutX="145.0" layoutY="166.0" prefHeight="25.0" prefWidth="162.0" promptText="username" />
+            <TextField fx:id="emailID" layoutX="145.0" layoutY="298.0" prefHeight="25.0" prefWidth="299.0" promptText="email address" />
+            <Text layoutX="320.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A minimum of 8 characters" />
+            <Text layoutX="320.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It must contain an uppercase and a special letter (@#$..)" />
+            <Button layoutX="299.0" layoutY="376.0" mnemonicParsing="false" onAction="#AddButton" prefHeight="19.0" prefWidth="80.0" text="Add" />
+            <Label fx:id="errorLabel" layoutX="146.0" layoutY="337.0" opacity="0.0" text="Invalid Information/Password doesn't meet the requirements" textFill="#e80000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Text layoutX="28.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retype Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="retypePasswordID" layoutX="145.0" layoutY="257.0" prefHeight="25.0" prefWidth="162.0" promptText="retype password" />
+            <PasswordField fx:id="passwordID" layoutX="145.0" layoutY="210.0" prefHeight="25.0" prefWidth="162.0" promptText="password" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
